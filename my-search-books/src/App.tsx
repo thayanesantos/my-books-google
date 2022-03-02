@@ -1,70 +1,189 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
-import { Dropdown, Icon, Menu, Segment } from 'semantic-ui-react';
+import { Search, Grid, Header, Segment, Label } from 'semantic-ui-react';
+import { Button, Card, Image } from 'semantic-ui-react';
+import { Pagination } from 'semantic-ui-react';
+import { Rating } from 'semantic-ui-react';
+import { Icon, Modal } from 'semantic-ui-react';
 
 
+function ModalExampleCloseIcon() {
+  const [open, setOpen] = React.useState(false)
+
+  return (
+    <Modal
+      closeIcon
+      open={open}
+      trigger={<Button></Button>}
+      onClose={() => setOpen(false)}
+      onOpen={() => setOpen(true)}
+    >
+      <Header icon='archive' content='Archive Old Messages' />
+      <Modal.Content>
+        <p>
+          Your inbox is getting full, would you like us to enable automatic
+          archiving of old messages?
+        </p>
+      </Modal.Content>
+      <Modal.Actions>
+        <Button color='red' onClick={() => setOpen(false)}>
+          <Icon name='remove' /> No
+        </Button>
+        <Button color='green' onClick={() => setOpen(false)}>
+          <Icon name='checkmark' /> Yes
+        </Button>
+      </Modal.Actions>
+    </Modal>
+  )
+}
 
 function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Thay
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+        <Grid>
+          <Grid.Column width={12}>
+            <Search />
+          </Grid.Column>
+
+          <Grid.Column width={12}>
+
+          </Grid.Column>
+        </Grid>
       </header>
+      <Card.Group>
+        <Card>
+          {ModalExampleCloseIcon()}
+          <Card.Content>
+            <Image
+              floated='left'
+              size='tiny'
+              src='https://react.semantic-ui.com/images/avatar/large/steve.jpg'
+            />
+            <Rating />
+            <Card.Header>Steve Sanders</Card.Header>
+            <Card.Meta>Friends of Elliot</Card.Meta>
+            <Card.Description>
+              Steve wants to add you to the group <strong>best friends</strong>
+            </Card.Description>
+          </Card.Content>
+        </Card>
+        <Card>
+          {ModalExampleCloseIcon()}
+          <Card.Content>
+            <Image
+              floated='left'
+              size='tiny'
+              src='https://react.semantic-ui.com/images/avatar/large/steve.jpg'
+            />
+            <Rating />
+            <Card.Header>Steve Sanders</Card.Header>
+            <Card.Meta>Friends of Elliot</Card.Meta>
+            <Card.Description>
+              Steve wants to add you to the group <strong>best friends</strong>
+            </Card.Description>
+          </Card.Content>
+        </Card>
+        <Card>
+          {ModalExampleCloseIcon()}
+          <Card.Content>
+            <Image
+              floated='left'
+              size='tiny'
+              src='https://react.semantic-ui.com/images/avatar/large/steve.jpg'
+            />
+            <Rating />
+            <Card.Header>Steve Sanders</Card.Header>
+            <Card.Meta>Friends of Elliot</Card.Meta>
+            <Card.Description>
+              Steve wants to add you to the group <strong>best friends</strong>
+            </Card.Description>
+          </Card.Content>
+        </Card>
+        <Card>
+          {ModalExampleCloseIcon()}
+          <Card.Content>
+            <Image
+              floated='left'
+              size='tiny'
+              src='https://react.semantic-ui.com/images/avatar/large/steve.jpg'
+            />
+            <Rating />
+            <Card.Header>Steve Sanders</Card.Header>
+            <Card.Meta>Friends of Elliot</Card.Meta>
+            <Card.Description>
+              Steve wants to add you to the group <strong>best friends</strong>
+            </Card.Description>
+          </Card.Content>
+        </Card>
+        <Card>
+          {ModalExampleCloseIcon()}
+          <Card.Content>
+            <Image
+              floated='left'
+              size='tiny'
+              src='https://react.semantic-ui.com/images/avatar/large/steve.jpg'
+            />
+            <Rating />
+            <Card.Header>Steve Sanders</Card.Header>
+            <Card.Meta>Friends of Elliot</Card.Meta>
+            <Card.Description>
+              Steve wants to add you to the group <strong>best friends</strong>
+            </Card.Description>
+          </Card.Content>
+        </Card>
+        <Card>
+          {ModalExampleCloseIcon()}
+          <Card.Content>
+            <Image
+              floated='left'
+              size='tiny'
+              src='https://react.semantic-ui.com/images/avatar/large/steve.jpg'
+            />
+            <Rating />
+            <Card.Header>Steve Sanders</Card.Header>
+            <Card.Meta>Friends of Elliot</Card.Meta>
+            <Card.Description>
+              Steve wants to add you to the group <strong>best friends</strong>
+            </Card.Description>
+          </Card.Content>
+        </Card>
+        <Card>
+          {ModalExampleCloseIcon()}
+          <Card.Content>
+            <Image
+              floated='left'
+              size='tiny'
+              src='https://react.semantic-ui.com/images/avatar/large/steve.jpg'
+            />
+            <Rating />
+            <Card.Header>Steve Sanders</Card.Header>
+            <Card.Meta>Friends of Elliot</Card.Meta>
+            <Card.Description>
+              Steve wants to add you to the group <strong>best friends</strong>
+            </Card.Description>
+          </Card.Content>
+        </Card>
+        <Card>
+          {ModalExampleCloseIcon()}
+          <Card.Content>
+            <Image
+              floated='left'
+              size='tiny'
+              src='https://react.semantic-ui.com/images/avatar/large/steve.jpg'
+            />
+            <Rating />
+            <Card.Header>Steve Sanders</Card.Header>
+            <Card.Meta>Friends of Elliot</Card.Meta>
+            <Card.Description>
+              Steve wants to add you to the group <strong>best friends</strong>
+            </Card.Description>
+          </Card.Content>
+        </Card>
 
+      </Card.Group>
       <div>
-        <Menu attached='top'>
-          <Dropdown item icon='wrench' simple>
-            <Dropdown.Menu>
-              <Dropdown.Item>
-                <Icon name='dropdown' />
-                <span className='text'>New</span>
-
-                <Dropdown.Menu>
-                  <Dropdown.Item>Document</Dropdown.Item>
-                  <Dropdown.Item>Image</Dropdown.Item>
-                </Dropdown.Menu>
-              </Dropdown.Item>
-              <Dropdown.Item>Open</Dropdown.Item>
-              <Dropdown.Item>Save...</Dropdown.Item>
-              <Dropdown.Item>Edit Permissions</Dropdown.Item>
-              <Dropdown.Divider />
-              <Dropdown.Header>Export</Dropdown.Header>
-              <Dropdown.Item>Share</Dropdown.Item>
-            </Dropdown.Menu>
-          </Dropdown>
-
-          <Menu.Menu position='right'>
-            <div className='ui right aligned category search item'>
-              <div className='ui transparent icon input'>
-                <input
-                  className='prompt'
-                  type='text'
-                  placeholder='Search animals...'
-                />
-                <i className='search link icon' />
-              </div>
-              <div className='results' />
-            </div>
-          </Menu.Menu>
-        </Menu>
-
-        <Segment attached='bottom'>
-          <img src='https://react.semantic-ui.com/images/wireframe/paragraph.png' />
-        </Segment>
+        <Pagination defaultActivePage={5} totalPages={10} />
       </div>
-
     </div>
   );
 }
